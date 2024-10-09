@@ -1,0 +1,17 @@
+.parent-feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.parent-feature p{
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: small;
+}
+.parent-feature h1{
+    font-size: 3rem;
+    font-weight: 600;
+}
