@@ -1,0 +1,32 @@
+.intouch_parent {
+	background-image: url("https://preview.colorlib.com/theme/oakberry/images/bg_4.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.intouch_content {
+	background-color: #5fa51dcc;
+}
+.intouch {
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	padding: 3rem 9rem;
+	align-items: center;
+	color: white;
+}
+.intouch_quotes h1 {
+	color: white;
+	font-size: 40px;
+	font-weight: 600;
+	width: 90%;
+	line-height: 1.5;
+}
+.intouch_quotes p {
+	margin: 0;
+}
+.intouch_button .button {
+	background-color: black !important;
+	font-size: 13px;
+	padding: 1rem !important;
+}
