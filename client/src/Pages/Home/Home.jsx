@@ -14,6 +14,7 @@ import Intouch from "../../Component/Intouch/Intouch";
 import Agent_Card from "../../Component/Agent_Card/Agent_Card";
 import userdetails from "../../Data/User_details.json";
 import Gallery from "../../Component/Gallery/Gallery";
+import Footer from "../../Component/Footer/Footer";
 
 function Home() {
 	const size = "3rem";
@@ -192,11 +193,9 @@ function Home() {
 			</div>
 			<About />
 			<Intouch />
-				<div className="home_agent">
-					<div className="bg_1"></div>
-					<div className="bg_2"></div>
-					<div className="home_agent_card">
-						<div className="home_agent_card_main container">
+			<div className="home_agent">
+				<div className="home_agent_card">
+					<div className="home_agent_card_main container">
 						<div className="topic ">
 							<h2>Meets Our Agents</h2>
 							<h1>Our Agents</h1>
@@ -207,11 +206,12 @@ function Home() {
 								<Agent_Card key={index} agent={userdetail} />
 							))}
 						</div>
-						</div>
 					</div>
 				</div>
-				<Gallery/>
 			</div>
+			<Gallery />
+			<Footer />
+		</div>
 	);
 }
 

@@ -34,9 +34,9 @@
 .galley_img:hover .gallery_icon {
 	opacity: 1; /* Show the icon when hovering over the image */
 }
-.fa-solid{
-    padding: 0.8rem;
-    border-radius: 50%;
-    font-size: small;
-    background-color: var(--primary-color);
+.gallery_icon .fa-solid {
+	padding: 0.8rem;
+	border-radius: 50%;
+	font-size: small;
+	background-color: var(--primary-color);
 }

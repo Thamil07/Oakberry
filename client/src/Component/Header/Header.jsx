@@ -17,7 +17,7 @@ function Header() {
 							<Link>HOME</Link>
 						</li>
 						<li>
-							<Link>ABOUT</Link>
+							<Link to="/about">ABOUT</Link>
 						</li>
 						<li>
 							<Link>PROPERTIES</Link>
@@ -34,7 +34,7 @@ function Header() {
 					</ul>
 				</div>
 				<div>
-					<Button text="Login" shape="round"/>
+					<Button text="Login" shape="round" />
 				</div>
 			</header>
 		</div>

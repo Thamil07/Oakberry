@@ -6,6 +6,7 @@ import Header from "./Component/Header/Header";
 import Home from "./Pages/Home/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import About_Page from "./Pages/About_Page/About_Page";
 
 function App() {
 	useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
 			<Header />
 			<Routes>
 				<Route path="/" element={<Home />}></Route>
+				<Route path="/about" element={<About_Page/>}></Route>
 			</Routes>
 		</BrowserRouter>
 	);
