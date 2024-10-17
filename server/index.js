@@ -1,18 +1,13 @@
 const express=require("express")
-const bodyparser=require("body-parser")
-const cors=require("cors")
-const ProductRouter=require("./Routers/Product_Router");
-
-
+const cors= require("cors")
+const port=5555
 
 const app=express()
-app.use(express.json())
-app.use(bodyparser.json())
 app.use(cors())
-app.use("api/auth",ProductRouter)
-const port=5000;
+app.use(express.json())
+
 
 app.listen(port,()=>{
-    console.log(`Server is successfully running on this port No:${port}`);
+    console.log(`server is successfully running on this port 5555`);
     
 })

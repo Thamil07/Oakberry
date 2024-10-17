@@ -1,12 +1,12 @@
 import React from "react";
 import "./Header.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Button from "../Button/Button";
 
 function Header() {
 	return (
-		<div>
-			<header className="parent_header mx-auto">
+		<div className="parent_head">
+			<header className="parent_header mx-auto container-xxl">
 				<div className="brand">
 					<h1>Oakberry</h1>
 					<p>REAL ESTATE AGENCY</p>
@@ -14,27 +14,41 @@ function Header() {
 				<div>
 					<ul>
 						<li>
-							<Link>HOME</Link>
+							<NavLink to="/" activeClassName="active">
+								HOME
+							</NavLink>
 						</li>
 						<li>
-							<Link to="/about">ABOUT</Link>
+							<NavLink to="/about" activeClassName="active">
+								ABOUT
+							</NavLink>
 						</li>
 						<li>
-							<Link>PROPERTIES</Link>
+							<NavLink to="/properties" activeClassName="active">
+								PROPERTIES
+							</NavLink>
 						</li>
 						<li>
-							<Link>AGENTS</Link>
+							<NavLink to="/agent" activeClassName="active">
+								AGENTS
+							</NavLink>
 						</li>
 						<li>
-							<Link>BLOG</Link>
+							<NavLink to="/blog" activeClassName="active">
+								BLOG
+							</NavLink>
 						</li>
 						<li>
-							<Link>CONTACT</Link>
+							<NavLink to="/contact" activeClassName="active">
+								CONTACT
+							</NavLink>
 						</li>
 					</ul>
 				</div>
 				<div>
-					<Button text="Login" shape="round" />
+					<NavLink to="/login">
+						<Button text="Login" shape="round" />
+					</NavLink>
 				</div>
 			</header>
 		</div>

@@ -76,7 +76,9 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 }
+
 .footer_details span {
 	color: rgba(255, 255, 255, 0.7);
 	font-size: 14px;
@@ -97,4 +99,12 @@ a {
 .question p {
 	font-size: 14px;
 	color: rgba(255, 255, 255, 0.7);
+}
+.footer_details a{
+	cursor:default;
+}
+.footer_details a:hover{
+	color: var(--primary-color) !important;
+	transition: color 0.5s ease-in-out;
+
 }

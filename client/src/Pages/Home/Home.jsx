@@ -1,12 +1,9 @@
 import React from "react";
 import Slides from "../../Component/slides/Slides";
-import Button from "../../Component/Button/Button";
 import "./Home.css";
-import { CiSearch } from "react-icons/ci";
-import { FaLandmark, FaAngleDown } from "react-icons/fa6";
+import { FaLandmark } from "react-icons/fa6";
 import { HiHomeModern, HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import { LiaIndustrySolid } from "react-icons/lia";
-import { IoLocationOutline } from "react-icons/io5";
 import { FaPlay } from "react-icons/fa6";
 import Feature_Properties from "../../Component/Feature_Properties/Feature_Properties";
 import About from "../../Component/About/About";
@@ -14,7 +11,7 @@ import Intouch from "../../Component/Intouch/Intouch";
 import Agent_Card from "../../Component/Agent_Card/Agent_Card";
 import userdetails from "../../Data/User_details.json";
 import Gallery from "../../Component/Gallery/Gallery";
-import Footer from "../../Component/Footer/Footer";
+import Filter from "../../Component/Filter/Filter";
 
 function Home() {
 	const size = "3rem";
@@ -22,45 +19,7 @@ function Home() {
 		<div className="parent-home">
 			<div className="hero-section">
 				<Slides />
-				<div className="filter ">
-					<div className="bt">
-						<Button text={"Buy Properties"} />
-						<Button text={"Rent Properties"} />
-					</div>
-					<div className="searchbar container">
-						<div className="option">
-							<p className="mb-0">Enter Keyword</p>
-							<div>
-								<CiSearch />
-								<input placeholder="Enter Keyword"></input>
-							</div>
-						</div>
-						<div className="option">
-							<p className="mb-0">Property Type</p>
-							<div>
-								<FaAngleDown />
-								<input placeholder="Enter Keyword"></input>
-							</div>
-						</div>
-						<div className="option">
-							<p className="mb-0">Location</p>
-							<div>
-								<IoLocationOutline />
-								<input placeholder="Enter Keyword"></input>
-							</div>
-						</div>
-						<div className="option">
-							<p className="mb-0">Price Limit</p>
-							<div>
-								<FaAngleDown />
-								<input placeholder="Enter Keyword"></input>
-							</div>
-						</div>
-						<div className="option Search">
-							<p className="mb-0"> SEARCH</p>
-						</div>
-					</div>
-				</div>
+				<Filter/>
 			</div>
 			<div className="categories">
 				<div className="categories-section">
@@ -210,7 +169,7 @@ function Home() {
 				</div>
 			</div>
 			<Gallery />
-			<Footer />
+
 		</div>
 	);
 }

@@ -7,6 +7,12 @@ import Home from "./Pages/Home/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import About_Page from "./Pages/About_Page/About_Page";
+import Agent from "./Pages/Agent/Agent";
+import Footer from "./Component/Footer/Footer";
+import Properties from "./Pages/Properties/Properties_Page";
+import Login from "./Pages/Login/Login";
+import Signup from "./Pages/Signup/Signup";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
 	useEffect(() => {
@@ -17,10 +23,25 @@ function App() {
 	}, []);
 	return (
 		<BrowserRouter>
-			<Header />
 			<Routes>
-				<Route path="/" element={<Home />}></Route>
-				<Route path="/about" element={<About_Page/>}></Route>
+				<Route path="/login" element={<Login />} />
+				<Route path="/signup" element={<Signup />} />
+				<Route
+					path="/*"
+					element={
+						<>
+							<Header />
+							<Routes>
+								<Route path="/" element={<Home />} />
+								<Route path="/about" element={<About_Page />} />
+								<Route path="/properties" element={<Properties />} />
+								<Route path="/agent" element={<Agent />} />
+								<Route path="/contact" element={<Contact />} />
+							</Routes>
+							<Footer />
+						</>
+					}
+				/>
 			</Routes>
 		</BrowserRouter>
 	);

@@ -80,7 +80,7 @@
 		"bdroom": 1,
 		"bhroom": 1,
 		"size": 900,
-		"image": "https://example.com/property6.jpg"
+		"image": "https://cdn.pixabay.com/photo/2018/08/14/05/17/manor-3604684_1280.jpg"
 	},
 	{
 		"name": "Linda Garcia",
@@ -94,7 +94,7 @@
 		"bdroom": 5,
 		"bhroom": 3,
 		"size": 4000,
-		"image": "https://example.com/property7.jpg"
+		"image": "https://cdn.pixabay.com/photo/2019/10/17/02/39/villa-4555818_1280.jpg"
 	},
 	{
 		"name": "James Martinez",
@@ -108,7 +108,7 @@
 		"bdroom": 2,
 		"bhroom": 2,
 		"size": 1200,
-		"image": "https://example.com/property8.jpg"
+		"image": "https://cdn.pixabay.com/photo/2014/11/11/22/54/bedroom-527645_1280.jpg"
 	},
 	{
 		"name": "Patricia Rodriguez",
@@ -122,7 +122,7 @@
 		"bdroom": 3,
 		"bhroom": 3,
 		"size": 2500,
-		"image": "https://example.com/property9.jpg"
+		"image": "https://cdn.pixabay.com/photo/2021/12/05/02/33/real-estate-6846355_1280.jpg"
 	},
 	{
 		"name": "Daniel Lee",
@@ -136,7 +136,7 @@
 		"bdroom": 2,
 		"bhroom": 1,
 		"size": 1500,
-		"image": "https://example.com/property10.jpg"
+		"image": "https://cdn.pixabay.com/photo/2019/09/24/19/07/villa-4502016_1280.jpg"
 	},
 	{
 		"name": "Susan Hernandez",
@@ -150,7 +150,7 @@
 		"bdroom": 2,
 		"bhroom": 1,
 		"size": 900,
-		"image": "https://example.com/property11.jpg"
+		"image": "https://cdn.pixabay.com/photo/2017/08/20/19/46/house-2662937_1280.jpg"
 	},
 	{
 		"name": "Christopher Young",
@@ -164,7 +164,7 @@
 		"bdroom": 4,
 		"bhroom": 3,
 		"size": 3500,
-		"image": "https://example.com/property12.jpg"
+		"image": "https://cdn.pixabay.com/photo/2019/10/17/02/39/villa-4555824_1280.jpg"
 	},
 	{
 		"name": "Jessica King",
@@ -178,6 +178,187 @@
 		"bdroom": 1,
 		"bhroom": 1,
 		"size": 600,
-		"image": "https://example.com/property13.jpg"
+		"image": "https://cdn.pixabay.com/photo/2014/10/05/22/40/family-home-475879_1280.jpg"
+	},
+	{
+		"name": "John Doe",
+		"agpic": "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA5L3Jhd3BpeGVsb2ZmaWNlMl9zaW1wbGVfbGluZWFsX3ZlY3Rvcl9pbGx1c3RyYXRpb25fb2ZfYV9zaW1wbGVfYl9mOTQ1YjZhZC03NzMxLTRjMjktOWRhZC1lNTQzYTk0NThkZjYucG5n.png",
+		"date": "2024-10-01",
+		"property_name": "Luxury Villa",
+		"ogprice": 500000,
+		"offprice": 450000,
+		"location": "Los Angeles, CA",
+		"type": "Sale",
+		"bdroom": 4,
+		"bhroom": 3,
+		"size": 3500,
+		"image": "https://cdn.pixabay.com/photo/2018/07/08/18/25/lake-geneva-3524431_1280.jpg"
+	},
+	{
+		"name": "Jane Smith",
+		"agpic": "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA5L3Jhd3BpeGVsb2ZmaWNlMl9zaW1wbGVfbGluZWFsX3ZlY3Rvcl9pbGx1c3RyYXRpb25fb2ZfYV9zaW1wbGVfYl9mOTQ1YjZhZC03NzMxLTRjMjktOWRhZC1lNTQzYTk0NThkZjYucG5n.png",
+		"date": "2024-09-26",
+		"property_name": "Modern Apartment",
+		"ogprice": 350,
+		"offprice": "320/mo",
+		"location": "New York, NY",
+		"type": "Rent",
+		"bdroom": 2,
+		"bhroom": 2,
+		"size": 1200,
+		"image": "https://cdn.pixabay.com/photo/2014/08/03/23/41/house-409451_1280.jpg"
+	},
+	{
+		"name": "Emily Johnson",
+		"agpic": "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA5L3Jhd3BpeGVsb2ZmaWNlMl9zaW1wbGVfbGluZWFsX3ZlY3Rvcl9pbGx1c3RyYXRpb25fb2ZfYV9zaW1wbGVfYl9mOTQ1YjZhZC03NzMxLTRjMjktOWRhZC1lNTQzYTk0NThkZjYucG5n.png",
+		"date": "2024-10-02",
+		"property_name": "Cozy Cottage",
+		"ogprice": 250000,
+		"location": "Austin, TX",
+		"type": "Sale",
+		"bdroom": 3,
+		"bhroom": 2,
+		"size": 1800,
+		"image": "https://cdn.pixabay.com/photo/2024/07/16/13/01/ai-generated-8899272_1280.jpg"
+	},
+	{
+		"name": "Michael Brown",
+		"agpic": "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDI0LTA5L3Jhd3BpeGVsb2ZmaWNlMl9zaW1wbGVfbGluZWFsX3ZlY3Rvcl9pbGx1c3RyYXRpb25fb2ZfYV9zaW1wbGVfYl9mOTQ1YjZhZC03NzMxLTRjMjktOWRhZC1lNTQzYTk0NThkZjYucG5n.png",
+		"date": "2024-10-05",
+		"property_name": "Beachfront Condo",
+		"ogprice": 600000,
+		"offprice": 580000,
+		"location": "Miami, FL",
+		"type": "Sale",
+		"bdroom": 2,
+		"bhroom": 2,
+		"size": 1500,
+		"image": "https://cdn.pixabay.com/photo/2013/03/22/00/24/log-home-95677_1280.jpg"
+	},
+	{
+		"name": "Sarah Davis",
+		"agpic": "https://example.com/agent5.jpg",
+		"date": "2024-09-30",
+		"property_name": "Charming Townhouse",
+		"ogprice": 300000,
+		"offprice": 280000,
+		"location": "San Francisco, CA",
+		"type": "Rent",
+		"bdroom": 3,
+		"bhroom": 2,
+		"size": 2000,
+		"image": "https://cdn.pixabay.com/photo/2024/07/16/13/01/ai-generated-8899272_1280.jpg"
+	},
+	{
+		"name": "David Wilson",
+		"agpic": "https://example.com/agent6.jpg",
+		"date": "2024-09-29",
+		"property_name": "Stylish Loft",
+		"ogprice": 450000,
+		"offprice": null,
+		"location": "Chicago, IL",
+		"type": "Sale",
+		"bdroom": 1,
+		"bhroom": 1,
+		"size": 900,
+		"image": "https://cdn.pixabay.com/photo/2018/08/14/05/17/manor-3604684_1280.jpg"
+	},
+	{
+		"name": "Linda Garcia",
+		"agpic": "https://example.com/agent7.jpg",
+		"date": "2024-10-03",
+		"property_name": "Spacious Farmhouse",
+		"ogprice": 700000,
+		"offprice": 680000,
+		"location": "Austin, TX",
+		"type": "Sale",
+		"bdroom": 5,
+		"bhroom": 3,
+		"size": 4000,
+		"image": "https://cdn.pixabay.com/photo/2019/10/17/02/39/villa-4555818_1280.jpg"
+	},
+	{
+		"name": "James Martinez",
+		"agpic": "https://example.com/agent8.jpg",
+		"date": "2024-10-04",
+		"property_name": "Elegant Bungalow",
+		"ogprice": 350000,
+		"offprice": 340000,
+		"location": "Seattle, WA",
+		"type": "Rent",
+		"bdroom": 2,
+		"bhroom": 2,
+		"size": 1200,
+		"image": "https://cdn.pixabay.com/photo/2014/11/11/22/54/bedroom-527645_1280.jpg"
+	},
+	{
+		"name": "Patricia Rodriguez",
+		"agpic": "https://example.com/agent9.jpg",
+		"date": "2024-09-20",
+		"property_name": "Luxury Penthouse",
+		"ogprice": 900000,
+		"offprice": 850000,
+		"location": "New York, NY",
+		"type": "Sale",
+		"bdroom": 3,
+		"bhroom": 3,
+		"size": 2500,
+		"image": "https://cdn.pixabay.com/photo/2021/12/05/02/33/real-estate-6846355_1280.jpg"
+	},
+	{
+		"name": "Daniel Lee",
+		"agpic": "https://example.com/agent10.jpg",
+		"date": "2024-09-28",
+		"property_name": "Cozy Cabin",
+		"ogprice": 400000,
+		"offprice": null,
+		"location": "Denver, CO",
+		"type": "Sale",
+		"bdroom": 2,
+		"bhroom": 1,
+		"size": 1500,
+		"image": "https://cdn.pixabay.com/photo/2019/09/24/19/07/villa-4502016_1280.jpg"
+	},
+	{
+		"name": "Susan Hernandez",
+		"agpic": "https://example.com/agent11.jpg",
+		"date": "2024-10-06",
+		"property_name": "Urban Apartment",
+		"ogprice": 300000,
+		"offprice": 290000,
+		"location": "Los Angeles, CA",
+		"type": "Rent",
+		"bdroom": 2,
+		"bhroom": 1,
+		"size": 900,
+		"image": "https://cdn.pixabay.com/photo/2017/08/20/19/46/house-2662937_1280.jpg"
+	},
+	{
+		"name": "Christopher Young",
+		"agpic": "https://example.com/agent12.jpg",
+		"date": "2024-09-22",
+		"property_name": "Modern Villa",
+		"ogprice": 800000,
+		"offprice": null,
+		"location": "San Francisco, CA",
+		"type": "Sale",
+		"bdroom": 4,
+		"bhroom": 3,
+		"size": 3500,
+		"image": "https://cdn.pixabay.com/photo/2019/10/17/02/39/villa-4555824_1280.jpg"
+	},
+	{
+		"name": "Jessica King",
+		"agpic": "https://example.com/agent13.jpg",
+		"date": "2024-10-08",
+		"property_name": "Chic Studio",
+		"ogprice": 200000,
+		"offprice": 190000,
+		"location": "Chicago, IL",
+		"type": "Rent",
+		"bdroom": 1,
+		"bhroom": 1,
+		"size": 600,
+		"image": "https://cdn.pixabay.com/photo/2014/10/05/22/40/family-home-475879_1280.jpg"
 	}
 ]

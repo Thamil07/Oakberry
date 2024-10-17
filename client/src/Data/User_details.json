@@ -1,7 +1,7 @@
 [
 	{
 		"name": "John Doe",
-		"picture": "https://cdn.pixabay.com/photo/2024/01/25/14/07/gintoki-8532008_1280.jpg",
+		"picture": "https://cdn.pixabay.com/photo/2023/06/13/10/34/ai-generated-8060643_1280.jpg",
 		"propertiesCount": 25,
 		"socialMedia": {
 			"twitter": "https://twitter.com/johndoe",
@@ -12,7 +12,7 @@
 	},
 	{
 		"name": "Jane Smith",
-		"picture": "https://cdn.pixabay.com/photo/2024/01/25/14/07/gintoki-8532008_1280.jpg",
+		"picture": "https://cdn.pixabay.com/photo/2024/04/10/07/02/man-8687405_1280.jpg",
 		"propertiesCount": 30,
 		"socialMedia": {
 			"twitter": "https://twitter.com/janesmith",
@@ -34,7 +34,7 @@
 	},
 	{
 		"name": "Emily White",
-		"picture": "https://cdn.pixabay.com/photo/2024/01/25/14/07/gintoki-8532008_1280.jpg",
+		"picture": "https://cdn.pixabay.com/photo/2024/04/10/07/02/man-8687405_1280.jpg",
 		"propertiesCount": 40,
 		"socialMedia": {
 			"twitter": "https://twitter.com/emilywhite",
@@ -56,7 +56,7 @@
 	},
 	{
 		"name": "Laura Wilson",
-		"picture": "https://cdn.pixabay.com/photo/2024/01/25/14/07/gintoki-8532008_1280.jpg",
+		"picture": "https://cdn.pixabay.com/photo/2024/04/10/07/02/man-8687405_1280.jpg",
 		"propertiesCount": 35,
 		"socialMedia": {
 			"twitter": "https://twitter.com/laurawilson",
@@ -78,7 +78,7 @@
 	},
 	{
 		"name": "Sophia Garcia",
-		"picture": "https://example.com/images/jamesanderson.jpg",
+		"picture": "https://cdn.pixabay.com/photo/2024/04/10/07/02/man-8687405_1280.jpg",
 		"propertiesCount": 28,
 		"socialMedia": {
 			"twitter": "https://twitter.com/sophiagarcia",
@@ -100,7 +100,7 @@
 	},
 	{
 		"name": "Olivia Martinez",
-		"picture": "https://cdn.pixabay.com/photo/2024/01/25/14/07/gintoki-8532008_1280.jpg",
+		"picture": "https://cdn.pixabay.com/photo/2024/04/10/07/02/man-8687405_1280.jpg",
 		"propertiesCount": 27,
 		"socialMedia": {
 			"twitter": "https://twitter.com/oliviamartinez",

@@ -1,0 +1,5 @@
+.parent_agent .home_agent_card_detail {
+	padding: 7em 0 !important;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
