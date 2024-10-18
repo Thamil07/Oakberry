@@ -88,3 +88,8 @@ h2 {
 	color: white;
 	z-index: 10000;
 }
+@media(max-width:768px){
+	.Testimonial_content h1{
+		font-size: 28px;
+	}
+}

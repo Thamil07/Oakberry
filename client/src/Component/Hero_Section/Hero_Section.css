@@ -1,4 +1,4 @@
-.hero_section {
+.hero_section_main {
 	height: 550px;
 	background: url(https://preview.colorlib.com/theme/oakberry/images/bg_4.jpg);
 	background-attachment: fixed;
@@ -11,12 +11,13 @@
 	gap: 2rem;
 	font-size: 14px;
 	text-align: center;
-	color: rgba(255, 255, 255, 0.8);
+	color: rgb(255, 255, 255);
 
 	position: relative; /* To position the pseudo-element */
+	z-index: -2;
 }
 
-.hero_section::before {
+.hero_section_main::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -24,9 +25,10 @@
 	right: 0;
 	bottom: 0;
 	background: rgba(0, 0, 0, 0.5);
+	z-index: -1;
 }
 
-.hero_content {
+.hero_section_main.hero_content {
 	padding-top: 4.5rem;
 	z-index: 0;
 }
@@ -40,18 +42,20 @@
 	margin-bottom: 10px;
 }
 
-.hero_content .link {
+.hero_section_main.hero_content .link {
+	color: #fff;
 	margin-right: 0.5rem;
+	z-index: 0;
 }
 
-.hero_content i {
+.hero_section_main.hero_content i {
 	font-size: 14px;
 	padding: 0px 5px;
 }
 
-.hero_content h1 {
+.hero_section_main.hero_content h1 {
 	line-height: 1.5;
 	font-size: 70px;
-	color: #fff;
+	color: #fff !important;
 	font-weight: 700;
 }

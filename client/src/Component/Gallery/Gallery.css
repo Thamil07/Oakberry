@@ -40,3 +40,11 @@
 	font-size: small;
 	background-color: var(--primary-color);
 }
+@media(max-width:786px){
+	.container-xl-fluid{
+		flex-direction: column;
+	}
+	.galley_img{
+		width: 100%;
+	}
+}

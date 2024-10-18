@@ -5,7 +5,7 @@ function About() {
 	return (
 		<div className="about_parent container">
 			<div className="about_img_a"><img src="https://preview.colorlib.com/theme/oakberry/images/about.jpg" alt="" /></div>
-			<div className="about_content">
+			<div className="about_content container">
 				<h4>ABOUT US</h4>
 				<h1>Oakberry A Real Estate Company</h1>
 				<p>

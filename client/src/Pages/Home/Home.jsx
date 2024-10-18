@@ -14,12 +14,12 @@ import Gallery from "../../Component/Gallery/Gallery";
 import Filter from "../../Component/Filter/Filter";
 
 function Home() {
-	const size = "3rem";
+	const size = "10rem";
 	return (
 		<div className="parent-home">
-			<div className="hero-section">
+			<div className="Home_hero_section">
 				<Slides />
-				<Filter/>
+				<Filter />
 			</div>
 			<div className="categories">
 				<div className="categories-section">
@@ -27,34 +27,34 @@ function Home() {
 						<p style={{ textTransform: "uppercase" }}>Oakberry Categories</p>
 						<h2>Explore Our Categories & Places</h2>
 					</div>
-					<div className="categories-cards container">
-						<div className="categories-option">
+					<div className="categories-cards">
+						<div className="categories-option container">
 							<div
 								data-aos="fade-up"
 								data-aos-duration="500"
 								className="categories-list">
-								<FaLandmark size={size} />
+								<FaLandmark style={{ fontSize: "2.5rem" }} />
 								<p>Land</p>
 							</div>
 							<div
 								data-aos="fade-up"
 								data-aos-duration="1000"
 								className="categories-list">
-								<HiHomeModern size={size} />
+								<HiHomeModern style={{ fontSize: "2.5rem" }} />
 								<p>Residential</p>
 							</div>
 							<div
 								data-aos="fade-up"
 								data-aos-duration="1500"
 								className="categories-list">
-								<HiOutlineBuildingOffice2 size={size} />
+								<HiOutlineBuildingOffice2 style={{ fontSize: "2.5rem" }} />
 								<p>Commercial</p>
 							</div>
 							<div
 								data-aos="fade-up"
 								data-aos-duration="2000"
 								className="categories-list">
-								<LiaIndustrySolid size={size} />
+								<LiaIndustrySolid style={{ fontSize: "2.5rem" }} />
 								<p>Industrial</p>
 							</div>
 						</div>
@@ -131,21 +131,15 @@ function Home() {
 			</div>
 			<Feature_Properties />
 			<div className="modern">
-				<div className="modern_image">
-					<img
-						src="https://preview.colorlib.com/theme/oakberry/images/bg_4.jpg"
-						alt=""
-					/>
-					<div className="Modern_quotes">
-						<h1>Modern House Video</h1>
-						<p>
-							Far far away, behind the word mountains, far from the countries
-							Vokalia and Consonantia, there live the blind texts.
-						</p>
-						<div className="effect">
-							<div className="modern_icon">
-								<FaPlay style={{ color: "white", fontSize: "50px" }} />
-							</div>
+				<div className="Modern_quotes">
+					<h1>Modern House Video</h1>
+					<p>
+						Far far away, behind the word mountains, far from the countries
+						Vokalia and Consonantia, there live the blind texts.
+					</p>
+					<div className="effect">
+						<div className="modern_icon">
+							<FaPlay style={{ color: "white", fontSize: "50px" }} />
 						</div>
 					</div>
 				</div>
@@ -168,8 +162,8 @@ function Home() {
 					</div>
 				</div>
 			</div>
-			<Gallery />
 
+			<Gallery />
 		</div>
 	);
 }

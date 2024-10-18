@@ -4,33 +4,34 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	padding-bottom: 10rem;
+	/* padding-bottom: 10rem; */
 }
 .our {
 	text-transform: uppercase;
 	color: var(--primary-color);
-    font-weight: 700;
+	font-weight: 700;
 }
 .parent-feature h1 {
 	font-size: 3rem;
 	font-weight: 700;
 }
 .feature-properties {
-    padding-top: 5rem;
-	display: flex;
-	flex-direction: row;
-	width: 90%;
-	gap: 1.5rem;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(
+		4,
+		1fr
+	); /* Displays property cards in 4 columns */
+	gap: 1.5rem; /* Space between each property card */
+	padding: 10em 0; /* Adjust the padding as needed */
 }
 .feature-property-card {
 	background-color: #fff;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 	display: flex;
-    flex: 1;
-    height: 500px;
+	flex: 1;
+	height: 500px;
 	flex-direction: column;
-    gap: 1rem;
+	gap: 1rem;
 }
 .property_img {
 	width: 100%;
@@ -109,35 +110,34 @@
 	font-size: small;
 }
 .pname {
-	font-size:20px;
+	font-size: 20px;
 	font-weight: 700;
 	color: black;
 }
-.plocation{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
+.plocation {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
 }
 .icons {
-    display: flex;
-    align-items: center; /* Vertically centers the icon and text */
+	display: flex;
+	align-items: center; /* Vertically centers the icon and text */
 }
-.icons p{
-    margin: 0;
+.icons p {
+	margin: 0;
 }
 svg {
-    height: 1em !important;
-    vertical-align:text-bottom;
-  }
+	height: 1em !important;
+	vertical-align: text-bottom;
+}
 
 .sale {
-    padding: 0rem 1rem;
+	padding: 0rem 1rem;
 	background-color: var(--primary-color);
 }
-.rent{
-    padding: 0rem 1rem;
+.rent {
+	padding: 0rem 1rem;
 	background-color: red;
-
 }
 .agent_details {
 	display: flex;
@@ -165,4 +165,9 @@ svg {
 .property_size p {
 	padding: 0;
 	margin: 0;
+}
+@media (max-width: 768px) {
+	.feature-properties {
+		grid-template-columns: repeat(1, 1fr) !important;
+	}
 }

@@ -1,9 +1,9 @@
 .parent_head {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.1) !important;
+	background-color: rgba(0, 0, 0, 0.1);
 }
 
 .parent_header {
@@ -55,6 +55,56 @@ a {
 	font-weight: 600;
 	color: rgba(255, 255, 255, 0.7);
 }
-.parent_head .active{
+.parent_head .active {
 	color: white;
+}
+.parent_head .menu,
+i {
+	display: none;
+	margin-right: 0.5rem;
+	cursor: default;
+}
+.mobile_header {
+	display: none;
+	padding-left: 0.5rem;
+	padding-bottom: 1rem;
+}
+
+.mobile_header.open {
+	display: block; /* Show when the "open" class is added */
+}
+.mobile_header ul {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	padding: 2rem 1rem;
+	font-size: 14px;
+	font-weight: 700;
+	gap: 1rem;
+	margin: 0;
+}
+.mob_login button {
+	padding: 0.5rem 2rem;
+	border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+	.parent_head {
+		position: relative;
+		background-color: rgb(6, 6, 56);
+		
+	}
+	.parent_head .login {
+		display: none;
+	}
+	.parent_head .menu {
+		display: block;
+		color: white;
+	}
+	.parent_header {
+		justify-content: space-between;
+	}
+	.parent_header ul {
+		display: none;
+	}
 }

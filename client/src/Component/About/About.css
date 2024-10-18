@@ -58,5 +58,18 @@
 }
 .about_img_b img{
     height: 100%;
+    object-fit: cover;
     width: 100%;
+}
+
+@media(max-width:786px){
+    .about_data{
+        flex-direction: column;
+    }
+    .about_img_a{
+        display: none;
+    }
+    .about_content{
+        width: 100%;
+    }
 }

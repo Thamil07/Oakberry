@@ -2,9 +2,9 @@ import React from "react";
 import "./Hero_Section.css";
 import { Link } from "react-router-dom";
 
-function Hero_Section({ pagename }) {
+function Hero_Section({ pagename , className }) {
 	return (
-		<div className="hero_section">
+		<div className={`${className} hero_section_main`}>
 			<div className="hero_content">
 				<div data-aos="fade-up" className="hero_link">
 					<Link className="link" to="/">
@@ -18,7 +18,7 @@ function Hero_Section({ pagename }) {
 						<i class="fa fa-chevron-right"></i>
 					</p>
 				</div>
-				<h1>{pagename}</h1>
+				<h1 >{pagename}</h1>
 			</div>
 		</div>
 	);

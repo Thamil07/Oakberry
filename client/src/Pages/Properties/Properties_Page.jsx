@@ -40,8 +40,10 @@ function Properties_Page() {
 
 	return (
 		<div className="parent_properties">
-			<Hero_Section className="head_properties" pagename="Properties" />
+			<div className="head_properties">
+			<Hero_Section pagename="Properties" />
 			<Filter />
+			</div>
 			<div className="feature-properties container">
 				{currentProperties.map((property, index) => (
 					<PropertyCard key={index} property={property} />

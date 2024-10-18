@@ -8,7 +8,7 @@ import { MdLocationPin } from "react-icons/md";
 
 function PropertyCard({ property }) {
 	return (
-		<div className="feature-property-card">
+		<div className="feature-property-card container">
 			<div className="property_img">
 				<img src={property.image} alt={property.location} />
 				<div className="price_list">

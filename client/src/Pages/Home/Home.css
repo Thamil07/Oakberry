@@ -1,9 +1,10 @@
 .parent-home {
 	scrollbar-width: none;
 }
-.hero-section {
+.Home_hero_section {
 	position: relative;
-	height: 120vh;
+	/* height: 100vh; */
+	min-height: 700px;
 }
 .categories {
 	display: flex;
@@ -14,7 +15,7 @@
 }
 .categories-section {
 	display: flex;
-	width: 80%;
+	width: 100%;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -42,11 +43,15 @@
 .categories-cards {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
 }
 .categories-option {
 	display: flex;
 	flex-direction: row;
 	gap: 0.3rem;
+	width: 75%;
 }
 .categories-list {
 	display: flex;
@@ -56,7 +61,11 @@
 	align-items: center;
 	flex: 1;
 	margin: 0;
-	padding: 5rem;
+	padding:80px 0px;
+}
+.categories-list p {
+	font-size: 1.5rem;
+	margin: 0;
 }
 .categories-list:hover {
 	background: var(--primary-color);
@@ -73,6 +82,7 @@
 	justify-content: space-evenly;
 	padding-bottom: 5rem;
 }
+
 .categories-city ul {
 	margin: 0;
 	padding: 0;
@@ -100,22 +110,15 @@ hr {
 }
 .modern {
 	width: 100%;
-}
-.modern_image {
 	height: 600px;
-	position: relative;
-}
-.modern_image img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	filter: brightness(0.7);
+	background: url(https://preview.colorlib.com/theme/oakberry/images/bg_4.jpg)
+		center/cover no-repeat;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .Modern_quotes {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -125,11 +128,11 @@ hr {
 	font-size: 40px;
 	color: white;
 	font-weight: 700;
+	text-align: center;
 }
 .Modern_quotes p {
 	color: #999999;
 	font-size: 16px;
-	width: 38rem;
 	text-align: center;
 	line-height: 1.8;
 	margin: 0;
@@ -216,4 +219,40 @@ hr {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+@media (max-width: 700px) {
+	.home_agent_card_detail {
+		flex-direction: column;
+	}
+	.categories {
+		margin-top: 15rem !important;
+	}
+	.categories-option {
+		flex-direction: column;
+		width: 100%;
+
+	}
+	.categories-city {
+		flex-direction: column;
+	}
+	.carousel-caption {
+		top: 0 !important;
+	}
+	.categories-section h2 {
+		font-size: 24px;
+		text-align: center;
+	}
+	
+	.Home_hero_section .filter {
+		bottom: -15rem !important;
+	}
+	.carousel-caption h3 {
+		width: 100%;
+		font-size: 50px;
+		margin-bottom: 0;
+	}
+
+	.head1 h2 {
+		width: 100%;
+	}
 }

@@ -33,7 +33,6 @@
 	font-size: 15px;
 	padding: 0;
 	color: rgba(240, 248, 255, 0.438);
-	width: 240px;
 	line-height: 2;
 }
 .div_1 div p {
@@ -107,4 +106,10 @@ a {
 	color: var(--primary-color) !important;
 	transition: color 0.5s ease-in-out;
 
+}
+@media(max-width:786px){
+	.footer_details{
+		flex-direction: column;
+		padding-left: 1rem;
+	}
 }
