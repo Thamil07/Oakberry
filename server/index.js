@@ -1,13 +1,16 @@
 const express=require("express")
-const cors= require("cors")
-const port=5555
+const cors=require("cors")
+const {ConnectDB,PORT}=require("./config/index")
+const UserRouter=require("./Routers/Agent_Router")
 
 const app=express()
-app.use(cors())
+
 app.use(express.json())
+app.use(cors())
+app.use("/api/auth",UserRouter)
 
-
-app.listen(port,()=>{
-    console.log(`server is successfully running on this port 5555`);
-    
-})
+ConnectDB()
+app.listen(PORT,()=>{
+    console.log(`server is running on port ${PORT}`)
+}
+)

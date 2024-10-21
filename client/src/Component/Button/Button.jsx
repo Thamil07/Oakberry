@@ -1,10 +1,12 @@
 import "./Button.css";
 import React from "react";
 
-function Button({ text, shape, className }) {
+function Button({ text, shape, className, onClick }) {
 	const buttonclass = shape === "round" ? "round" : "square";
 	return (
-		<button className={`${className} ${buttonclass} button`}>{text}</button>
+		<button onClick={onClick} className={`${className} ${buttonclass} button`}>
+			{text}
+		</button>
 	);
 }
 

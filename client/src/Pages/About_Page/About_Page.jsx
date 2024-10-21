@@ -13,21 +13,15 @@ function About_Page() {
 			<Hero_Section pagename="About Us" />
 			<About />
 			<div className="modern">
-				<div className="modern_image">
-					<img
-						src="https://preview.colorlib.com/theme/oakberry/images/bg_4.jpg"
-						alt=""
-					/>
-					<div className="Modern_quotes">
-						<h1>Modern House Video</h1>
-						<p>
-							Far far away, behind the word mountains, far from the countries
-							Vokalia and Consonantia, there live the blind texts.
-						</p>
-						<div className="effect">
-							<div className="modern_icon">
-								<FaPlay style={{ color: "white", fontSize: "50px" }} />
-							</div>
+				<div className="Modern_quotes">
+					<h1>Modern House Video</h1>
+					<p>
+						Far far away, behind the word mountains, far from the countries
+						Vokalia and Consonantia, there live the blind texts.
+					</p>
+					<div className="effect">
+						<div className="modern_icon">
+							<FaPlay style={{ color: "white", fontSize: "50px" }} />
 						</div>
 					</div>
 				</div>
