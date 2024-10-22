@@ -16,6 +16,11 @@
 	position: relative; /* To position the pseudo-element */
 	z-index: -2;
 }
+.hero_section_main i {
+	display: none;
+	margin-right: 0.5rem;
+	cursor: default;
+}
 
 .hero_section_main::before {
 	content: "";

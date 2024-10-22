@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Login.css";
 import Button from "../../Component/Button/Button";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
 	const navigate = useNavigate();
@@ -30,7 +30,7 @@ function Login() {
 				}
 			);
 			localStorage.setItem("agentid", response.data.agentid);
-			navigate("/")
+			navigate("/");
 
 			setSuccess(response.data.message);
 			setError(null);
@@ -71,9 +71,13 @@ function Login() {
 						/>
 						<label htmlFor="password">Password</label> {/* Fixed here */}
 					</div>
-					<div className="login_bt">
+					<div className="login_bt">{
 						<Button onClick={handleLogin} text="Login" />
+					}
 					</div>
+					<p>
+						If You Don't have a account <Link to="/signup">Click Here</Link>
+					</p>
 				</div>
 				<div>
 					{error && <div style={{ color: "red" }}>{error}</div>}{" "}

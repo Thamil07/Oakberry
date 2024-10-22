@@ -15,6 +15,11 @@
 a {
 	cursor: default;
 }
+.parent_header .submit_bt{
+	padding: 0.5rem;
+	border-radius: 10px;
+	font-size: 14px;
+}
 .parent_head {
 	position: absolute;
 	top: 0%;
@@ -58,7 +63,7 @@ a {
 .parent_head .active {
 	color: white;
 }
-.parent_head .menu,
+.parent_head .menu, .parent_head
 i {
 	display: none;
 	margin-right: 0.5rem;
@@ -97,8 +102,11 @@ i {
 	.parent_head .login {
 		display: none;
 	}
-	.parent_head .menu {
-		display: block;
+	.parent_head .menu,.parent_head
+	i {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 		color: white;
 	}
 	.parent_header {

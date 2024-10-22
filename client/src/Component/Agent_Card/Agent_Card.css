@@ -10,12 +10,16 @@
 }
 .Agent_card_parent:hover img {
 	transform: scale(1.1);
-    filter: brightness(0.5);
+	filter: brightness(0.5);
 	overflow: hidden;
-    transition: transform 1s ease-in-out , filter 1s ease-out;
-    
+	transition: transform 1s ease-in-out, filter 1s ease-out;
 }
-
+.Agent_card_parent .menu,
+i {
+	display: none;
+	margin-right: 0rem;
+	cursor: default;
+}
 .agent_img {
 	height: 290px; /* Sets the height of the image container */
 	width: 100%;
@@ -45,6 +49,7 @@
 .social {
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-start !important;
 	gap: 5px;
 }
 .social a {
