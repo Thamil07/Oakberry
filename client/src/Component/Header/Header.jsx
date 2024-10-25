@@ -8,9 +8,9 @@ function Header() {
 	const [storedid, setStoredId] = useState("");
 
 	useEffect(() => {
-		const agentid = localStorage.getItem("agentid");
-		if (agentid) {
-			setStoredId(agentid);
+		const Token = localStorage.getItem("Token");
+		if (Token) {
+			setStoredId(Token);
 		}
 	}, []);
 
@@ -65,7 +65,13 @@ function Header() {
 				</div>
 				<div className="login">
 					{storedid ? (
-						<Button onClick={handleLogin} className="submit_bt" text="Submit a property" shape="square" />
+						<NavLink to="/add_property">
+							<Button
+								className="submit_bt"
+								text="Submit a property"
+								shape="square"
+							/>
+						</NavLink>
 					) : (
 						<NavLink to="/login">
 							<Button text="Login" shape="round" />
@@ -111,7 +117,13 @@ function Header() {
 				</ul>
 				<div className="mob_login">
 					{storedid ? (
-						<Button onClick={handleLogin} className="submit_bt" text="Submit a property" shape="square" />
+						<NavLink to="/add_property">
+							<Button
+								className="submit_bt"
+								text="Submit a property"
+								shape="square"
+							/>
+						</NavLink>
 					) : (
 						<NavLink to="/login">
 							<Button text="Login" shape="square" />

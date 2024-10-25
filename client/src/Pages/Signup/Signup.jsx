@@ -42,7 +42,7 @@ function Register() {
 		try {
 			const response = await axios.post(
 				"http://127.0.0.1:5555/api/auth/add_user", // Updated endpoint to register
-				{ agentid, name, username, password }
+				{ agentid, name, username, password, }
 			);
 			setSuccess(response.data.message);
 		} catch (err) {

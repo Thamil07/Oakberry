@@ -17,7 +17,7 @@
 	z-index: -2;
 }
 .hero_section_main i {
-	display: none;
+	margin-left: 0.2rem;
 	margin-right: 0.5rem;
 	cursor: default;
 }

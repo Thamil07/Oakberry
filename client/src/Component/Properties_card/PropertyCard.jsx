@@ -42,7 +42,7 @@ function PropertyCard({ property }) {
 				</div>
 				<div className="all_property_details">
 					<div className="property_details">
-						<p className="pname">{property.property_name}</p>
+						<p className="pname">{property.propertyname}</p>
 						<div className="plocation">
 							<p>
 								<span>
@@ -50,7 +50,7 @@ function PropertyCard({ property }) {
 								</span>
 								{property.location}
 							</p>
-							<p className={property.type === "Sale" ? "sale" : "rent"}>
+							<p className={property.type === "sale" ? "sale" : "rent"}>
 								{property.type}
 							</p>
 						</div>

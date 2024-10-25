@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slides from "../../Component/slides/Slides";
 import "./Home.css";
 import { FaLandmark } from "react-icons/fa6";
@@ -12,8 +12,17 @@ import Agent_Card from "../../Component/Agent_Card/Agent_Card";
 import userdetails from "../../Data/User_details.json";
 import Gallery from "../../Component/Gallery/Gallery";
 import Filter from "../../Component/Filter/Filter";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+	const navigate = useNavigate();
+	useEffect(() => {
+		const Token = localStorage.getItem("Token");
+		if (!Token) {
+			navigate("/login");
+		}
+	}, [navigate]);
+
 	const size = "10rem";
 	return (
 		<div className="parent-home">

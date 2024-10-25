@@ -1,5 +1,7 @@
 const Agent = require("../Models/Agent_Model");
 const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const {JWT_SECRET}=require("../config/index")
 
 class Agent_Controller {
 	async add_user(req, res) {
@@ -58,9 +60,12 @@ class Agent_Controller {
 		if (!match) {
 			return res.status(401).json({ error: "Invaild Credentials" });
 		}
+		const payload = jwt.sign({ id: agent._id }, process.env.JWT_SECRET, {
+			expiresIn: "60m", // Token expiration time
+		});
+		const token = payload;
 		// console.log(agentid)
-        return res.status(200).json({message:'Login successfully', agentid:agent.agentid})
-		
+		return res.status(200).json({ message: "Login successfully", token });
 	}
 }
 module.exports = Agent_Controller;

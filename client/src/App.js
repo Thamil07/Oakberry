@@ -13,6 +13,7 @@ import Properties from "./Pages/Properties/Properties_Page";
 import Login from "./Pages/Login/Login";
 import Signup from "./Pages/Signup/Signup";
 import Contact from "./Pages/Contact/Contact";
+import Add_Property from "./Pages/Add_Property/Add_Property";
 
 function App() {
 	useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
 			<Routes>
 				<Route path="/login" element={<Login />} />
 				<Route path="/signup" element={<Signup />} />
+				<Route path="/add_property" element={<Add_Property />} />
 				<Route
 					path="/*"
 					element={

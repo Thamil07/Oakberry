@@ -14,8 +14,8 @@ function Login() {
 	const usernameChange = (e) => setUsername(e.target.value);
 	const passwordChange = (e) => setPassword(e.target.value);
 	useEffect(() => {
-		const agentid = localStorage.getItem("agentid");
-		if (agentid) {
+		const Token = localStorage.getItem("Token");
+		if (Token) {
 			navigate("/");
 		}
 	}, [navigate]);
@@ -29,7 +29,7 @@ function Login() {
 					password,
 				}
 			);
-			localStorage.setItem("agentid", response.data.agentid);
+			localStorage.setItem("Token", response.data.token);
 			navigate("/");
 
 			setSuccess(response.data.message);

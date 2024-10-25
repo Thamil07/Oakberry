@@ -1,11 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Properties_Page.css";
 import Hero_Section from "../../Component/Hero_Section/Hero_Section";
 import Filter from "../../Component/Filter/Filter";
-import Properties from "../../Data/Properties.json";
+// import Properties from "../../Data/Properties.json";
 import PropertyCard from "../../Component/Properties_card/PropertyCard";
+import { useSearchParams } from "react-router-dom";
 
 function Properties_Page() {
+	const [searchParams] = useSearchParams();
+	console.log(searchParams);
+
+	const [Properties,setProperties]=useState("");
+	useEffect((async ()=>{
+		const response=await axios.get("http://127.0.0.1:5555/api/property/get_all_property",searchParams)
+	}))
+
 	const [currentPage, setCurrentPage] = useState(1);
 	const propertiesPerPage = 8;
 
@@ -41,8 +50,8 @@ function Properties_Page() {
 	return (
 		<div className="parent_properties">
 			<div className="head_properties">
-			<Hero_Section pagename="Properties" />
-			<Filter />
+				<Hero_Section pagename="Properties" />
+				<Filter />
 			</div>
 			<div className="feature-properties container">
 				{currentProperties.map((property, index) => (

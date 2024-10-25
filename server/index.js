@@ -1,16 +1,29 @@
-const express=require("express")
-const cors=require("cors")
-const {ConnectDB,PORT}=require("./config/index")
-const UserRouter=require("./Routers/Agent_Router")
+const express = require("express");
+const cors = require("cors");
+const { ConnectDB, PORT } = require("./config/index");
+const UserRouter = require("./Routers/Agent_Router");
+const PropertyRouter = require("./Routers/Property_Router");
+const path = require("path");
 
-const app=express()
+const app = express();
 
-app.use(express.json())
-app.use(cors())
-app.use("/api/auth",UserRouter)
+// Middleware to parse JSON data
+app.use(express.json());
 
-ConnectDB()
-app.listen(PORT,()=>{
-    console.log(`server is running on port ${PORT}`)
-}
-)
+// Middleware for CORS to allow cross-origin requests
+app.use(cors());
+
+// Middleware to serve uploaded images
+app.use("/uploads", express.static(path.join(__dirname, "Uploads")));
+
+// Routes
+app.use("/api/auth", UserRouter); // User-related routes
+app.use("/api", PropertyRouter); // Property-related routes
+
+// Connect to the Database
+ConnectDB();
+
+// Start the server
+app.listen(PORT, () => {
+	console.log(`Server is running on port ${PORT}`);
+});
