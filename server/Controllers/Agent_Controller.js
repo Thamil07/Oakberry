@@ -67,5 +67,15 @@ class Agent_Controller {
 		// console.log(agentid)
 		return res.status(200).json({ message: "Login successfully", token });
 	}
-}
+	async get_agent(req,res){
+		try{
+		const agents=await Agent.find();
+		console.log(agents)
+		return res.status(200).json(agents)
+		
+		}catch(err){
+			return res.status(500).json({Error:err.message})
+		}
+
+	}}
 module.exports = Agent_Controller;

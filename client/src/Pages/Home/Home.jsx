@@ -9,10 +9,10 @@ import Feature_Properties from "../../Component/Feature_Properties/Feature_Prope
 import About from "../../Component/About/About";
 import Intouch from "../../Component/Intouch/Intouch";
 import Agent_Card from "../../Component/Agent_Card/Agent_Card";
-import userdetails from "../../Data/User_details.json";
 import Gallery from "../../Component/Gallery/Gallery";
 import Filter from "../../Component/Filter/Filter";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Home() {
 	const navigate = useNavigate();
@@ -22,6 +22,23 @@ function Home() {
 			navigate("/login");
 		}
 	}, [navigate]);
+	const [agentdetails, setagentdetail] = useState([]);
+
+	useEffect(() => {
+		const fetchAgent = async () => {
+			try {
+				const response = await axios.get(
+					"http://127.0.0.1:5555/api/auth/getagent"
+				);
+				console.log(response.data); // Log the data to verify its structur
+				setagentdetail(response.data); // Set the data from the response
+			} catch (err) {
+				console.log("Error fetching agent details:", err.message);
+			}
+		};
+
+		fetchAgent();
+	}, []);
 
 	const size = "10rem";
 	return (
@@ -164,8 +181,8 @@ function Home() {
 						</div>
 
 						<div className="home_agent_card_detail">
-							{userdetails.slice(0, 4).map((userdetail, index) => (
-								<Agent_Card key={index} agent={userdetail} />
+							{agentdetails.slice(0, 4).map((agentdetail, index) => (
+								<Agent_Card key={index} agent={agentdetail} />
 							))}
 						</div>
 					</div>

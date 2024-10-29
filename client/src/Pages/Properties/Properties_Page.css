@@ -18,7 +18,12 @@
 	gap: 1.5rem; /* Space between each property card */
 	padding: 10em 0; /* Adjust the padding as needed */
 }
-
+.no-data p {
+	margin: 10rem;
+	text-align: center;
+	font-size: 36px;
+	font-family: "DynaPuff", system-ui !important;
+}
 .pagination {
 	display: flex;
 	justify-content: center;
@@ -53,8 +58,8 @@
 	color: #ffffff;
 	border: 1px solid var(--primary-color);
 }
-@media(max-width:700px){
-	.feature-properties{
+@media (max-width: 700px) {
+	.feature-properties {
 		margin-top: 15rem !important;
 	}
 }

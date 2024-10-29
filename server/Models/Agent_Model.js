@@ -12,10 +12,10 @@ const Agent_schema = mongoose.Schema({
 			"https://cdn.pixabay.com/photo/2023/05/02/10/35/avatar-7964945_1280.png",
 	},
 	socialMedia: {
-		twitter: { type: String },
-		facebook: { type: String },
-		gmail: { type: String },
-		instagram: { type: String },
+		twitter: { type: String, default: "https://twitter.com/" },
+		facebook: { type: String, default: "https://facebook.com/" },
+		gmail: { type: String, default: "@gmail.com" },
+		instagram: { type: String, default: "https://instagram.com/" },
 	},
 });
 

@@ -133,7 +133,7 @@ function Add_Property() {
 								onChange={handleChange}
 								required>
 								<option value="">Select type</option>
-								<option value="sale">Sale</option>
+								<option value="Sale">Sale</option>
 								<option value="rent">Rent</option>
 							</select>
 						</div>

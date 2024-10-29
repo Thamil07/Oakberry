@@ -6,4 +6,5 @@ const AgentController=new Agent_Controller()
 
 router.post("/add_user",AgentController.add_user)
 router.post("/login",AgentController.Login)
+router.get("/getagent",AgentController.get_agent)
 module.exports=router

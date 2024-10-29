@@ -31,8 +31,11 @@ function PropertyCard({ property }) {
 			<div className="all_details">
 				<div className="details_top">
 					<div className="agent_details">
-						<img src={property.agpic} alt={property.name} />
-						<p>{property.name}</p>
+						<img
+							src={property.property_agent.picture}
+							alt={property.property_name}
+						/>
+						<p>{property.property_agent.name}</p>
 					</div>
 					<p className="date">
 						{property.date
@@ -42,7 +45,7 @@ function PropertyCard({ property }) {
 				</div>
 				<div className="all_property_details">
 					<div className="property_details">
-						<p className="pname">{property.propertyname}</p>
+						<p className="pname">{property.property_name}</p>
 						<div className="plocation">
 							<p>
 								<span>
@@ -50,7 +53,7 @@ function PropertyCard({ property }) {
 								</span>
 								{property.location}
 							</p>
-							<p className={property.type === "sale" ? "sale" : "rent"}>
+							<p className={property.type === "Sale" ? "sale" : "rent"}>
 								{property.type}
 							</p>
 						</div>

@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "./Feature_Properties.css";
-import Properties from "../../Data/Properties.json";
 import PropertyCard from "../Properties_card/PropertyCard";
-
+import axios from "axios";
 function Feature_Properties() {
-	const [properties, setproperties] = useState([]);
 
+	const [Properties, setProperties] = useState([]);
 	useEffect(() => {
-		setproperties(Properties.slice(0, 4));
+		const fetchProperties = async () => {
+			try {
+				const response = await axios.get(
+					"http://127.0.0.1:5555/api/property/get_all_property"
+				);
+				setProperties((response.data).slice(0,4));
+			} catch (error) {
+				console.error("Error fetching properties:", error);
+			}
+		};
+
+		fetchProperties();
 	}, []);
 
 	return (
@@ -15,7 +25,7 @@ function Feature_Properties() {
 			<p className="our">Our Properties</p>
 			<h1>Featured Properties</h1>
 			<div className="feature-properties container">
-				{properties.map((property, index) => (
+				{Properties.map((property, index) => (
 					<PropertyCard key={index} property={property} />
 				))}
 			</div>

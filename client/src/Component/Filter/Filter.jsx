@@ -23,16 +23,16 @@ function Filter() {
 		}));
 	};
 	const handleSearchClick = () => {
-		const query= new URLSearchParams(search).toString();
+		const query = new URLSearchParams(search).toString();
 		navigate(`/properties?${query}`);
 	};
 
-	// const filter = async () => {
-	// 	const response = await axios.get(
-	// 		"http://127.0.0.1:5555/api/property/get_all_property",
-	// 		{ params: search }
-	// 	);
-	// };
+	const filter = async () => {
+		const response = await axios.get(
+			"http://127.0.0.1:5555/api/property/get_all_property",
+			{ params: search }
+		);
+	};
 
 	return (
 		<div className="filter ">
@@ -67,8 +67,9 @@ function Filter() {
 							id="type"
 							onChange={handleSearch}
 							required>
-							<option value="sale">Sale</option>
-							<option value="rent">Rent</option>
+							<option value="">Select Type</option>
+							<option value="Sale">Sale</option>
+							<option value="Rent">Rent</option>
 						</select>
 					</div>
 				</div>

@@ -98,6 +98,7 @@
 .property_details {
 	display: flex;
 	flex-direction: column;
+	gap:0.7rem;
 }
 .property_details div {
 	text-align: left;
@@ -110,7 +111,7 @@
 }
 .pname {
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 600;
 	color: black;
 }
 .plocation {
@@ -144,6 +145,7 @@ svg {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	gap: 10px;
 	color: rgba(0, 0, 0, 0.6);
 }
 .date {
