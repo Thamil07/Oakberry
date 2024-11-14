@@ -4,6 +4,7 @@ require("dotenv").config();
 exports.PORT = process.env.PORT;
 exports.PUBLIC_KEY = process.env.PUBLIC_KEY;
 exports.JWT_SECRET = process.env.JWT_SECRET;
+exports.JWT_REFRESH_KEY = process.env.JWT_REFRESH_KEY;
 
 exports.ConnectDB = async () => {
 	try {
@@ -12,6 +13,6 @@ exports.ConnectDB = async () => {
 		});
 		console.log("Database is successfully connected");
 	} catch (err) {
-		console.log(`Error Database is not connect properly ${err.message}`);
+		`Error Database is not connect properly ${err.message}`;
 	}
 };

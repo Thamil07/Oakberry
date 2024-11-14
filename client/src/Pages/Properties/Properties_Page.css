@@ -7,7 +7,7 @@
 	gap: 0.5rem;
 	width: 100%;
 	position: absolute;
-	top: 85%;
+	top: 75%;
 }
 .feature-properties {
 	display: grid;
@@ -16,7 +16,10 @@
 		1fr
 	); /* Displays property cards in 4 columns */
 	gap: 1.5rem; /* Space between each property card */
-	padding: 10em 0; /* Adjust the padding as needed */
+	padding: 10em 0 5em 0; /* Adjust the padding as needed */
+}
+.head_properties.feature-properties{
+	padding: 3em 0;
 }
 .no-data p {
 	margin: 10rem;
@@ -58,8 +61,20 @@
 	color: #ffffff;
 	border: 1px solid var(--primary-color);
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 	.feature-properties {
+		padding: 10rem 1rem 5rem 1rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.parent_properties .feature-properties {
+		padding: 20rem 1rem 10rem 1rem;
+	}
+	.parent_properties.feature-properties {
 		margin-top: 15rem !important;
+	}
+	.price_list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
 	}
 }

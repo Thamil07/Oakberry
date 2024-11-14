@@ -6,17 +6,16 @@ import Filter from "../../Component/Filter/Filter";
 import PropertyCard from "../../Component/Properties_card/PropertyCard";
 import { useSearchParams } from "react-router-dom";
 import axios from "axios";
+import {secureinstance} from "../../Interceptor/Interceptor";
 
 function Properties_Page() {
 	const [searchParams] = useSearchParams();
-	console.log(searchParams);
-
 	const [Properties, setProperties] = useState([]);
 	useEffect(() => {
 		const fetchProperties = async () => {
 			try {
-				const response = await axios.get(
-					"http://127.0.0.1:5555/api/property/get_all_property",
+				const response = await secureinstance.get(
+					"/property/get_all_property",
 					{
 						params: Object.fromEntries(searchParams),
 					}
@@ -26,7 +25,6 @@ function Properties_Page() {
 				console.error("Error fetching properties:", error);
 			}
 		};
-
 		fetchProperties();
 	}, [searchParams]); // Add searchParams to the dependency array
 
@@ -90,7 +88,9 @@ function Properties_Page() {
 								{index + 1}
 							</button>
 						))}
-						<button onClick={handleNextPage} disabled={currentPage === totalPages}>
+						<button
+							onClick={handleNextPage}
+							disabled={currentPage === totalPages}>
 							Next
 						</button>
 					</div>

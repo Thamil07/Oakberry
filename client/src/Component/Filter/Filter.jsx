@@ -59,7 +59,7 @@ function Filter() {
 					</div>
 				</div>
 				<div className="option">
-					<p className="mb-0">Property Type</p>
+					<p className="mb-0">Property_Type</p>
 					<div>
 						<select
 							name="type"
@@ -86,7 +86,7 @@ function Filter() {
 							placeholder="Enter Location"></input>
 					</div>
 				</div>
-				<div className="option">
+				<div className="option prlt">
 					<p className="mb-0">Price Limit</p>
 					<div>
 						<FaAngleDown />

@@ -3,7 +3,6 @@
 }
 .Home_hero_section {
 	position: relative;
-	/* height: 100vh; */
 	min-height: 700px;
 }
 .categories {
@@ -61,7 +60,7 @@
 	align-items: center;
 	flex: 1;
 	margin: 0;
-	padding:80px 0px;
+	padding: 80px 0px;
 }
 .categories-list p {
 	font-size: 1.5rem;
@@ -210,19 +209,33 @@ hr {
 	font-weight: 700;
 }
 .home_agent_card_detail {
-	display: flex;
-	flex-direction: row;
-	gap: 1.5rem;
-	padding: 0rem 1rem !important;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	gap:1.5rem;
 }
 .home_agent_card_main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-@media (max-width: 700px) {
+@media (max-width: 300px){
+	.carousel-caption h3 {
+		font-size: 20px;
+	}
+	.carousel-caption p {
+		font-size: 10px;
+		width: 100%;
+	}
+}
+/* @media (max-width: 500px){
+	.carousel-caption {
+		top:10% !important;
+		bottom: auto !important;
+	}
+} */
+@media (max-width: 900px) {
 	.home_agent_card_detail {
-		flex-direction: column;
+		grid-template-columns: repeat(2,1fr);
 	}
 	.categories {
 		margin-top: 15rem !important;
@@ -230,26 +243,40 @@ hr {
 	.categories-option {
 		flex-direction: column;
 		width: 100%;
-
 	}
 	.categories-city {
 		flex-direction: column;
 	}
 	.carousel-caption {
-		top: 0 !important;
+		top: 10% !important;
+		bottom: 7rem ;
 	}
 	.categories-section h2 {
 		font-size: 24px;
 		text-align: center;
 	}
-	
+
 	.Home_hero_section .filter {
 		bottom: -15rem !important;
+		padding: 1rem;
 	}
 	.carousel-caption h3 {
 		width: 100%;
 		font-size: 50px;
 		margin-bottom: 0;
+	}
+	.carousel-indicators button {
+		width: 20px !important;
+	}
+	.carousel-item button{
+		padding: 1rem !important;
+	}
+	.carousel-indicators .active {
+		width: 25px !important;
+		height: 3px !important;
+	}
+	.carousel-caption p {
+		width: 100%;
 	}
 
 	.head1 h2 {

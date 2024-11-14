@@ -1,7 +1,8 @@
 const Agent = require("../Models/Agent_Model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const {JWT_SECRET}=require("../config/index")
+const { JWT_SECRET, JWT_REFRESH_KEY } = require("../config/index");
+const axios = require("axios");
 
 class Agent_Controller {
 	async add_user(req, res) {
@@ -45,6 +46,19 @@ class Agent_Controller {
 			return res.status(500).json("User is not created");
 		}
 	}
+	async checkusername(req, res) {
+		const { username } = req.body;
+		try {
+			const checkusername = await Agent.findOne({ username });
+			if (checkusername) {
+				return res.status(201).json({ message: "Username already exist" });
+			} else {
+				return res.status(200).json({ message: "username available" });
+			}
+		} catch (err) {
+			return res.status(500);
+		}
+	}
 	async Login(req, res) {
 		const { username, password } = req.body;
 		if (!username || !password) {
@@ -53,6 +67,7 @@ class Agent_Controller {
 				.json({ error: "Username and password is required" });
 		}
 		const agent = await Agent.findOne({ username });
+
 		if (!agent) {
 			return res.status(401).json({ error: "Invaild Credentials" });
 		}
@@ -60,22 +75,37 @@ class Agent_Controller {
 		if (!match) {
 			return res.status(401).json({ error: "Invaild Credentials" });
 		}
-		const payload = jwt.sign({ id: agent._id }, process.env.JWT_SECRET, {
-			expiresIn: "60m", // Token expiration time
+		const payload = jwt.sign({ id: agent._id }, JWT_SECRET, {
+			expiresIn: "30m", // Token expiration time
+		});
+		const ref_payload = jwt.sign({ id: agent._id }, JWT_REFRESH_KEY, {
+			expiresIn: "1d",
 		});
 		const token = payload;
-		// console.log(agentid)
-		return res.status(200).json({ message: "Login successfully", token });
+		const refreshtoken = ref_payload;
+		// if (agent) {
+		// 		await axios.post(
+		// 			"https://hook.us2.make.com/krfrrmlk9l7e140obano2fue34aurqck",
+		// 			{
+		// 				userId: agent._id,
+		// 				username: agent.username,
+		// 				email: "thamil0705@gmail.com", // Ensure email is sent in the payload
+		// 				loginTime: new Date(),
+		// 			}
+		// 		);
+		// 	}
+		console.log(agent._id)
+		return res
+			.status(200)
+			.json({ message: "Login successfully", token, refreshtoken });
 	}
-	async get_agent(req,res){
-		try{
-		const agents=await Agent.find();
-		console.log(agents)
-		return res.status(200).json(agents)
-		
-		}catch(err){
-			return res.status(500).json({Error:err.message})
+	async get_agent(req, res) {
+		try {
+			const agents = await Agent.find();
+			return res.status(200).json(agents);
+		} catch (err) {
+			return res.status(500).json({ Error: err.message });
 		}
-
-	}}
+	}
+}
 module.exports = Agent_Controller;

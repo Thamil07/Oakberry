@@ -17,6 +17,10 @@ function Header() {
 	const toggleMobileMenu = () => {
 		setMobileMenuOpen(!isMobileMenuOpen);
 	};
+	const handlelogout = () => {
+		localStorage.removeItem("Token");
+		localStorage.removeItem("RefreshToken");
+	};
 
 	const handleLogin = () => {
 		// Logic to handle login (e.g., submit form or make API call)
@@ -52,19 +56,15 @@ function Header() {
 							</NavLink>
 						</li>
 						<li>
-							<NavLink to="/blog" activeClassName="active">
-								BLOG
-							</NavLink>
-						</li>
-						<li>
 							<NavLink to="/contact" activeClassName="active">
 								CONTACT
 							</NavLink>
 						</li>
 					</ul>
 				</div>
-				<div className="login">
-					{storedid ? (
+
+				{storedid ? (
+					<>
 						<NavLink to="/add_property">
 							<Button
 								className="submit_bt"
@@ -72,12 +72,20 @@ function Header() {
 								shape="square"
 							/>
 						</NavLink>
-					) : (
 						<NavLink to="/login">
-							<Button text="Login" shape="round" />
+							<Button
+								className="submit_bt"
+								text="Logout"
+								shape="square"
+								onClick={handlelogout}
+							/>
 						</NavLink>
-					)}
-				</div>
+					</>
+				) : (
+					<NavLink to="/login">
+						<Button text="Login" shape="round" />
+					</NavLink>
+				)}
 				<div className="menu" onClick={toggleMobileMenu}>
 					<i className="fa-solid fa-bars"></i> MENU
 				</div>
@@ -105,11 +113,6 @@ function Header() {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/blog" activeClassName="active">
-							BLOG
-						</NavLink>
-					</li>
-					<li>
 						<NavLink to="/contact" activeClassName="active">
 							CONTACT
 						</NavLink>
@@ -117,13 +120,23 @@ function Header() {
 				</ul>
 				<div className="mob_login">
 					{storedid ? (
-						<NavLink to="/add_property">
-							<Button
-								className="submit_bt"
-								text="Submit a property"
-								shape="square"
-							/>
-						</NavLink>
+						<div className="mobile_submit">
+							<NavLink to="/add_property">
+								<Button
+									className="submit_bt_mobile"
+									text="Submit a property"
+									shape="square"
+								/>
+							</NavLink>
+							<NavLink to="/login">
+								<Button
+									className="submit_bt_mobile"
+									text="Logout"
+									shape="square"
+									onClick={handlelogout}
+								/>
+							</NavLink>
+						</div>
 					) : (
 						<NavLink to="/login">
 							<Button text="Login" shape="square" />

@@ -61,8 +61,6 @@ textarea:focus {
 .contact_input textarea {
 	height: 80px !important;
 }
-.contact_somedia {
-}
 
 .contact_icon {
 	display: flex;
@@ -90,4 +88,19 @@ textarea:focus {
 	width: 100%;
 	overflow: hidden;
 
+}
+@media(max-width:900px) {
+
+	.company_contact {
+		display: flex;
+		flex-direction: column;
+	}
+	.contact_content {
+		display: flex;
+		flex-direction: column;
+		padding: 7em 0;
+	}
+	.contact_content_second,.contact_content_first{
+		width: 100%;
+	}
 }

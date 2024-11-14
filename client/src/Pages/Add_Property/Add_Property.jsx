@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Add_Property.css";
 import Header from "../../Component/Header/Header";
 import Footer from "../../Component/Footer/Footer";
 import PropertyCard from "../../Component/Properties_card/PropertyCard";
+import secureinstance from "../../Interceptor/Interceptor";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Add_Property() {
+	const navigate = useNavigate();
 	const Token = localStorage.getItem("Token");
+	console.log(Token);
+	useEffect(() => {
+		if (!Token) {
+			navigate("/login");
+		}
+	}, []);
 
 	const [propertyDetails, setPropertyDetails] = useState({
 		property_agent: Token,
@@ -57,16 +66,17 @@ function Add_Property() {
 		for (const key in propertyDetails) {
 			formData.append(key, propertyDetails[key]);
 		}
-
+		console.log(formData);
 		try {
 			const response = await axios.post(
-				"http://127.0.0.1:5555/api/property/add_property",
+				"http://localhost:5555/property/add_property",
 				formData,
 				{ headers: { "Content-Type": "multipart/form-data" } } // Important for file upload
 			);
-			console.log("Response data:", response.data);
+			console.log("Response data:", response);
 			alert("Successfully added property!");
 		} catch (err) {
+			alert("Error Property is not added successfully");
 			console.error("Error message:", err.message);
 		}
 	};
@@ -187,7 +197,7 @@ function Add_Property() {
 					</form>
 				</div>
 				<div className="property_second">
-					<PropertyCard property={propertyDetails} />
+					{Token ? <PropertyCard property={propertyDetails} /> : null}
 				</div>
 			</div>
 			<Footer />

@@ -3,6 +3,7 @@ const cors = require("cors");
 const { ConnectDB, PORT } = require("./config/index");
 const UserRouter = require("./Routers/Agent_Router");
 const PropertyRouter = require("./Routers/Property_Router");
+const RefreshRouter = require("./Routers/Refresh_Router");
 const path = require("path");
 
 const app = express();
@@ -19,6 +20,7 @@ app.use("/uploads", express.static(path.join(__dirname, "Uploads")));
 // Routes
 app.use("/api/auth", UserRouter); // User-related routes
 app.use("/api", PropertyRouter); // Property-related routes
+app.use("/api/token", RefreshRouter);
 
 // Connect to the Database
 ConnectDB();

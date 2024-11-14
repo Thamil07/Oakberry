@@ -23,13 +23,14 @@ function Login() {
 	const handleLogin = async () => {
 		try {
 			const response = await axios.post(
-				"http://127.0.0.1:5555/api/auth/login",
+				"http://localhost:5555/api/auth/login",
 				{
 					username,
 					password,
 				}
 			);
 			localStorage.setItem("Token", response.data.token);
+			localStorage.setItem("RefreshToken", response.data.refreshtoken);
 			navigate("/");
 
 			setSuccess(response.data.message);
@@ -37,6 +38,12 @@ function Login() {
 		} catch (error) {
 			setError(error.response ? error.response.data.error : "Server error");
 			setSuccess(null);
+		}
+	};
+	const handlekey = (e) => {
+		if (e.key === "Enter") {
+			e.preventDefault();
+			handleLogin();
 		}
 	};
 
@@ -56,6 +63,8 @@ function Login() {
 							required
 							value={username}
 							onChange={usernameChange} // Fixed here
+							onKeyDown={handlekey}
+							autoComplete="off"
 						/>
 						<label htmlFor="username">Username</label> {/* Fixed here */}
 					</div>
@@ -68,12 +77,12 @@ function Login() {
 							required
 							value={password}
 							onChange={passwordChange}
+							onKeyDown={handlekey}
 						/>
 						<label htmlFor="password">Password</label> {/* Fixed here */}
 					</div>
-					<div className="login_bt">{
-						<Button onClick={handleLogin} text="Login" />
-					}
+					<div className="login_bt">
+						{<Button onClick={handleLogin} text="Login" />}
 					</div>
 					<p>
 						If You Don't have a account <Link to="/signup">Click Here</Link>

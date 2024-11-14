@@ -10,7 +10,7 @@ function Slides() {
 				<Carousel.Item>
 					<img
 						className="block"
-						src="https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_1280.jpg"
+						src="https://cdn.pixabay.com/photo/2020/06/25/10/21/architecture-5339245_1280.jpg"
 						alt="First slide"
 					/>
 					<Carousel.Caption data-aos="fade-up" data-aos-duration="2000">
@@ -26,7 +26,7 @@ function Slides() {
 				<Carousel.Item>
 					<img
 						className="block"
-						src="https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_1280.jpg"
+						src="https://cdn.pixabay.com/photo/2021/12/05/02/33/real-estate-6846355_1280.jpg"
 						alt="Second slide"
 					/>
 					<Carousel.Caption data-aos="fade-up" data-aos-duration="2000">
@@ -42,7 +42,7 @@ function Slides() {
 				<Carousel.Item>
 					<img
 						className="block"
-						src="https://cdn.pixabay.com/photo/2016/11/29/03/53/house-1867187_1280.jpg"
+						src="https://cdn.pixabay.com/photo/2019/10/17/02/39/villa-4555824_1280.jpg"
 						alt="Third slide"
 					/>
 					<Carousel.Caption data-aos="fade-up" data-aos-duration="2000">

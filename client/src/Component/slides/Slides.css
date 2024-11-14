@@ -61,9 +61,10 @@
 	gap: 1rem;
 	align-items: center;
 	z-index: 2;
+	
 }
 .carousel-caption p {
-	width: 600px;
+	/* width: 600px; */
 }
 .carousel-caption div {
 	display: flex;
@@ -80,8 +81,10 @@
 	line-height: 1.1;
 	margin-bottom: 40px;
 	color: white;
-	text-shadow: 2px 2px 4px #000000;
 	line-height: 1.1;
+}
+.block{
+	filter: brightness(0.5);
 }
 .carousel-indicators .active {
 	opacity: 1;
